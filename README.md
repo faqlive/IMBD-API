@@ -37,6 +37,7 @@ function consultar(){
 |---|---|---|---|
 |content|content2|content3|content4|
 
-** blod **
-* italic *
-~~  tachado ~~
+**blod**
+
+*italic*
+~~tachado~~
