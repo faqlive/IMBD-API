@@ -1,0 +1,134 @@
+@import 'color';
+
+*{
+    margin: 0px;
+}
+
+body {
+    overflow-x: hidden;
+
+    header{
+        background-color: $color1;
+        width: 100%;
+        height: 10vh;
+    }
+    nav {
+        background-color: $color2;
+    //    width: 100%;
+        height: 8vh;
+    }
+    section {
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 5%;
+        
+    //  PANTALLA FRONT
+        &#front{
+            background-color: $color2;
+            position: absolute;
+            height: 75vh;
+            top: 18vh;
+            // BARRA DE PROGRESO
+            .progress-container {
+                margin: 3% 3%;
+                width:90%;
+                height:1.5em;
+                position:relative;
+                background-color: $color5;
+            
+            .progressbar {
+                background-color: $color3;
+                height:100%;
+                width: 10%;
+                position:absolute;
+                line-height:inherit;
+                &:hover{
+                    width:50%;
+                    animation: animateBar 2s 1;
+                    -webkit-animation: animateBar 2s 1;
+                    -moz-animation: animateBar 2s 1;
+                    }    
+                .valueBar {
+                    text-align: center;
+                    position: relative;
+                    margin: auto;
+                } //TEXTO
+               
+                } // PRGRES BAR
+            }   //  CONTAINER PROGRES BAR
+        }// FRONT
+    //  PANTALLA MIDDEL
+        &#middel{
+            background-color: $color3;
+            position: absolute;
+            height: 75vh;
+            top: 18vh;
+            img {
+                width: 200px;
+                height: 297px;
+            }
+        }
+        &#back{
+            background-color: $color5;
+            position: absolute;
+            height: 75vh;
+            top: 18vh;
+        }
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    aside{
+        background-color: $color4;
+        position: absolute;
+        width: 40%;
+        height: 75vh;
+        top: 18vh;
+
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    footer{
+        background-color: $color1;
+        width: 100%;
+        height: 7vh;
+        bottom: 0px;
+        position: absolute;
+    }
+ 
+    .container {
+        background-color: $color3;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+        margin: auto;
+        border: double;
+        text-align:center;
+        margin: auto 3%;
+       }
+
+      .item1 {
+        flex: 1 1; // Ocupa un lugar
+        border: solid 1px;
+      }
+      .item2 {
+        flex: 2 1; // Ocupa 3 lugares
+    //    margin: auto;
+        border: solid 1px;
+      }
+      .item3 {
+        flex: 0.5 1;   // Ocupa medio
+        border: solid 1px;
+      }
+    
+}
+@keyframes animateBar {
+    from {width:0%;}
+    to {width:50%;}
+}
