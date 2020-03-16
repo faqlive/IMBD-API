@@ -1,7 +1,8 @@
 [![IMBd]](https://www.imdb.com/)
 # IMBD aplication
  
-''' function consultar(){
+```JavaScript 
+function consultar(){
     consultaCompleta = ''
     http_request = new XMLHttpRequest();
     http_request.overrideMimeType('text/xml');
@@ -23,7 +24,8 @@
     }else{
         http_request.close();
     }
-}   '''
+}   
+```
 > blokquote text
 
 - lista
@@ -42,8 +44,9 @@
     <p>Los colores RGB son el rojo, verde y azul.</p>
 </details>
 ---
-** blod **
+**blod**
 ---
-* italic *
+*italic*
 ---
-~~  tachado ~~
+~~tachado~~
+
