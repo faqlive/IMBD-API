@@ -43,10 +43,10 @@ function consultar(){
     <summary>Colores RGB</summary>
     <p>Los colores RGB son el rojo, verde y azul.</p>
 </details>
----
+- - - -
 **blod**
----
+----
 *italic*
----
+----
 ~~tachado~~
 
