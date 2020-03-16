@@ -1,6 +1,6 @@
 *.sass
 *.log
-
+*.map
 # Compiled source #
 ###################
 *.com
