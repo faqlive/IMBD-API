@@ -51,20 +51,25 @@ function construirConsulta(){
 }
 function procesarJson(respuesta){
     var obj= JSON.parse(respuesta);
-    console.log(obj);
-    console.log(obj.Title);
+    $("#film").empty();
     // PINTAR CUTRE
 //  $("#film").html('<h2>' + obj.Title + '</h2><br><img src="'+ obj.Poster + '">');         // jQuery
 //  document.getElementById("film").innerHTML = '<h2>' + obj.Title + '</h2><br><img src="'+ obj.Poster + '">';      // JavaScript clasico
     var h2Titulo = document.createElement("h2");
-    var textoTitulo = document.createTextNode(obj.Title);
-    h2Titulo.appendChild(textoTitulo);
-    h2Titulo.setAttribute("class","titilo");
-//  document.querySelector("#film");        // SIMILAR a $("film") de jQuery
-    document.querySelector("#film").appendChild(h2Titulo);
-    var imagen = document.createElement("img");
-    imagen.setAttribute("src",obj.Poster);
-    $("#film").append(imagen);
+    if(obj.Response != "False"){
+        var textoTitulo = document.createTextNode(obj.Title);
+        h2Titulo.appendChild(textoTitulo);
+        h2Titulo.setAttribute("class","titulo");
+    //  document.querySelector("#film");        // SIMILAR a $("film") de jQuery
+        document.querySelector("#film").appendChild(h2Titulo);
+        var imagen = document.createElement("img");
+        imagen.setAttribute("src",obj.Poster);
+        $("#film").append(imagen);
+    } else {
+        var textoTitulo = document.createTextNode("Consulta no encontrada. Vuelva a inteantar");
+        h2Titulo.appendChild(textoTitulo);
+        $("#film").append(h2Titulo);
+    }
 }
 
 // http://www.omdbapi.com/?apikey=[yourkey]&
