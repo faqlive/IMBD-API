@@ -27,10 +27,8 @@
                   </div>
     </section>
     <section id="middel">
-        
-        
-            <input type="text" id="movTitle" name="movTitle"/>
             <!-- Instertar elementos de consultas -->
+            <input type="text" id="movTitle" name="movTitle"/>
             <input type="number" id="year" name="year" min="1895" max="2020"/>
             <select id="type" name="type" size="1">
                 <option value="" selected> - </option>
@@ -39,11 +37,11 @@
                 <option value="episode">EPISODIOS</option>
               </select> 
             <button type="button" onclick="consulta()" id="consultar">CONSUTAR PELICULA</button>
-        </form>        
-        <div id="film"></div>
+        <div id="film"><!-- AQUI SE MUESTA LA CONSULTA  --></div>
     </section>
     <section id="back"></section>
     <aside>
+        <div id="moveAside">O</div>
         <ul>
             <li class="front">FROTN</li>
             <li class="middel">MIDDEL</li>

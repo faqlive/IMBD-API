@@ -12,7 +12,7 @@ function init(){
     $("#front").css("left","0px");
     $("#middel").css("left","100%");
     $("#back").css("left","100%");
-    $("aside").click(function(){showAside()});
+    $("#moveAside").click(function(){showAside()});
     $(".front").click(function(){showFront()});
     $(".middel").click(function(){showMiddel()});
     $(".back").click(function(){showBack()});
